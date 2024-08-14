@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -29,6 +30,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    afterEvaluate {
+        publishing {
+            publications {
+                create<MavenPublication>("maven") {
+                    from (components["release"])
+                    groupId = "com.github.jiangxi120"
+                    artifactId = "baselib"
+                    version = "0.0.1"
+                }
+            }
+        }
     }
 }
 
