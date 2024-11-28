@@ -1,4 +1,4 @@
-package com.rocky.baselib.utils
+package com.rocky.baselib.ext
 
 import android.content.res.Resources
 import android.util.TypedValue

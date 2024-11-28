@@ -1,12 +1,11 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
 }
 
 android {
     namespace = "com.rocky.baselib"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
@@ -16,6 +15,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -31,23 +37,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>("maven") {
-                    from (components["release"])
-                    groupId = "com.github.jiangxi120"
-                    artifactId = "baselib"
-                    version = "0.0.1"
-                }
-            }
-        }
-    }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     testImplementation("junit:junit:4.13.2")
