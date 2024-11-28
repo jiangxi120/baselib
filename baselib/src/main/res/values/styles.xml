@@ -14,4 +14,9 @@
         <attr name="android:textSize" tools:ignore="ResourceName" />
         <attr name="android:textStyle" tools:ignore="ResourceName" />
     </declare-styleable>
+    <declare-styleable name="HollowView">
+        <attr name="corner" format="dimension" />
+        <attr name="padding" format="dimension" />
+        <attr name="shadowColor" format="color" />
+    </declare-styleable>
 </resources>
