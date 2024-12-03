@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BaseLib"
+rootProject.name = "Demo"
 include(":app")
 include(":baselib")

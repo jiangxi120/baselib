@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.rocky.baselib"
+    namespace = "com.rocky.demo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.rocky.baselib"
+        applicationId = "com.rocky.demo"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
@@ -52,6 +52,7 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(project(mapOf("path" to ":baselib")))
+    implementation("androidx.activity:activity:1.9.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")

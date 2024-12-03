@@ -1,10 +1,9 @@
-package com.rocky.baselib
+package com.rocky.demo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.rocky.baselib.databinding.ActivityMainBinding
 import com.rocky.baselib.ext.setOnFastClickListener
-import com.rocky.baselib.R
+import com.rocky.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy {
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvText.setOnFastClickListener {
-
+            TestKeyboardActivity.start(this)
         }
     }
 }
