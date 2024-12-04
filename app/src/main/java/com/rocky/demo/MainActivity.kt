@@ -3,6 +3,7 @@ package com.rocky.demo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.rocky.baselib.ext.setOnFastClickListener
+import com.rocky.baselib.utils.PackageUtil
 import com.rocky.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvText.setOnFastClickListener {
-            TestKeyboardActivity.start(this)
+//            TestKeyboardActivity.start(this)
+//            testLaunchPkg(this)
+            TestIteratorOnNull.test()
         }
     }
+
 }

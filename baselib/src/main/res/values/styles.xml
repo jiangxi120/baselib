@@ -19,4 +19,18 @@
         <attr name="padding" format="dimension" />
         <attr name="shadowColor" format="color" />
     </declare-styleable>
+    <declare-styleable name="StripView">
+        <attr name="strip_width" format="dimension" />
+        <attr name="strip_color" format="color" />
+        <attr name="strip_duration" format="integer" />
+        <attr name="strip_interval" format="integer" />
+        <attr name="strip_direction" format="enum">
+            <enum name="tl2br" value="0" />
+            <enum name="bl2tr" value="1" />
+        </attr>
+        <attr name="strip_shape" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
