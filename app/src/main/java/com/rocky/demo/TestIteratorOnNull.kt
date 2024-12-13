@@ -13,10 +13,10 @@ object TestIteratorOnNull {
 
     fun test() {
 //        for (i in list) {
-//            Log.d("demo", "TestIteratorOnNull, i: $i")
+//            Log.d("testdemo", "TestIteratorOnNull, i: $i")
 //        }
         flow.onEach {
-            Log.d("demo", "TestIteratorOnNull, it: $it")
+            Log.d("testdemo", "TestIteratorOnNull, it: $it")
         }.launchIn(CoroutineScope(Dispatchers.IO))
     }
 }

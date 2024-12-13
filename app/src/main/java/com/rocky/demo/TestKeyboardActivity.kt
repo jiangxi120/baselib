@@ -30,10 +30,4 @@ class TestKeyboardActivity : AppCompatActivity() {
             binding.etInput.hideKeyboard()
         }
     }
-
-    companion object {
-        fun start(mainActivity: MainActivity) {
-            mainActivity.startActivity(Intent(mainActivity, TestKeyboardActivity::class.java))
-        }
-    }
 }
