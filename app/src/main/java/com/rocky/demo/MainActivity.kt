@@ -15,15 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        this.startActivity(TestShareToAppActivity::class.java)
         binding.tvText1.setOnFastClickListener {
 //            this.startActivity(TestKeyboardActivity::class.java)
-//            testLaunchPkg(this)
-//            TestIteratorOnNull.test()
 //            this.startActivity(TestWebViewActivity::class.java)
-//            TestUriParse.test()
+//            startActivity(TestMediaStoreImageActivity::class.java)
+//            this.startActivity(TestShareToAppActivity::class.java)
+            this.startActivity(TestPickMediaActivity::class.java)
         }
         binding.tvText2.setOnClickListener {
+//            testLaunchPkg(this)
+//            TestIteratorOnNull.test()
+//            TestUriParse.test()
         }
     }
 

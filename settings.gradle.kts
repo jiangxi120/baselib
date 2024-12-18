@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Demo"
 include(":app")
 include(":baselib")
+include(":renderscript-toolkit")

@@ -1,11 +1,7 @@
 package com.rocky.demo
 
-import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import android.util.Log
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 
 object TestUriParse {

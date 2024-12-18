@@ -35,7 +35,7 @@ class TestShareToAppActivity : AppCompatActivity() {
 
 //            testShareLinkToVDM(this, "https://youtube.com/shorts/XV79i3aeKWc?si=aFhROe9IHgvIbnLr")
 
-//            testShareLinkToVDM(this, "http://music.youtube.com/")
+            testShareLinkToVDM(this, "http://music.youtube.com/")
 //            testShareLinkToVDM(this, "https://music.youtube.com/watch?v=JEvQROCyvaM&si=FEUYlwqD9nLJR55Y")
 //            testShareLinkToVDM(this, "https://music.youtube.com/playlist?list=RDCLAK5uy_lnrm39tngswIEjpm8d7-is3ajsYC-D_EU&playnext=1&si=3NrjRt2GiZ0SS1gz")
 //            testShareLinkToVDM(this, "https://music.youtube.com/channel/UCRw0x9_EfawqmgDI2IgQLLg?si=-58MsjP_grbyUrpO")
