@@ -8,13 +8,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.lifecycleScope
-import com.google.android.renderscript.Toolkit
-import com.rocky.baselib.ext.toBitmap
+import com.bumptech.glide.Glide
+import com.rocky.baselib.utils.BlurTransformation
 import com.rocky.demo.databinding.ActivityTestPickMediaBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class TestPickMediaActivity : AppCompatActivity() {
     private val binding by lazy {
@@ -28,14 +24,18 @@ class TestPickMediaActivity : AppCompatActivity() {
                 Log.d("PhotoPicker", "Number of items selected: ${uris.size}")
                 uris.firstOrNull()?.let {
 //                    binding.ivImage.setImageURI(it)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        it.toBitmap(this@TestPickMediaActivity)?.let { bm ->
-                            val blur = Toolkit.blur(bm, 25)
-                            withContext(Dispatchers.Main) {
-                                binding.ivImage.setImageBitmap(blur)
-                            }
-                        }
-                    }
+//                    lifecycleScope.launch(Dispatchers.IO) {
+//                        it.toBitmap(this@TestPickMediaActivity)?.let { bm ->
+//                            val blur = Toolkit.blur(bm, 25)
+//                            withContext(Dispatchers.Main) {
+//                                binding.ivImage.setImageBitmap(blur)
+//                            }
+//                        }
+//                    }
+                    Glide.with(binding.ivImage)
+                        .load(it)
+                        .transform(BlurTransformation())
+                        .into(binding.ivImage)
                 }
             } else {
                 Log.d("PhotoPicker", "No media selected")
